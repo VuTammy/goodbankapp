@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 require("dotenv").config()
 
 // used to serve static files from public directory
-app.use(express.static(path.resolve(__dirname, 'public/build')));
+app.use(express.static(path.resolve(__dirname, '/public')));
 app.use(cors());
 
 // connect to mongodb atlas

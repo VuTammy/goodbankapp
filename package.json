@@ -1,15 +1,13 @@
 {
   "name": "goodbankapp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-
-  },
-  "engines": {
-    "node": "14.20.0"
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +18,16 @@
     "env": "0.0.2",
     "express": "^4.18.2",
     "mongodb": "^4.11.0",
-    "node": "14.20.0"
-  }
+    "node": "^14.20.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VuTammy/goodbankapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VuTammy/goodbankapp/issues"
+  },
+  "homepage": "https://github.com/VuTammy/goodbankapp#readme",
+  "description": ""
 }

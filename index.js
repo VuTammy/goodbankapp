@@ -5,6 +5,7 @@ var dal     = require('./dal.js');
 const e = require('express');
 const path = require("path");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 require("dotenv").config()
 
 // used to serve static files from public directory
@@ -22,6 +23,9 @@ app.use(cors());
      )
      .then(() => console.log("MongoDB has been connected"))
      .catch((err) => console.log(err));
+
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.json());
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {

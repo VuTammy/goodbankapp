@@ -20,7 +20,7 @@ app.use(cors());
 // connect to mongodb atlas
     mongoose
      .connect(
-        "mongodb+srv://tammyvu:asdfasdf@cluster0.dh0cbrq.mongodb.net/?retryWrites=true&w=majority",
+        process.env.MONGODB_CONNECTION_STRING,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,

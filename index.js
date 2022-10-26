@@ -5,7 +5,7 @@ var dal     = require('./dal.js');
 const e = require('express');
 const path = require("path");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser"); 
 require("dotenv").config()
 
 // used to serve static files from public directory

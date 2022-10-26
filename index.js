@@ -14,7 +14,7 @@ app.use(cors());
 // connect to mongodb atlas
     mongoose
      .connect(
-         process.enodenv.MONGODB_CONNECTION_STRING,
+         process.env.MONGODB_CONNECTION_STRING,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
